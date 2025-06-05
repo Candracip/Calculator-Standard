@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="Styles.css">
+</head>
+    <body>
+     
+    <div class="all">
+        <!--<div class="allCalcu">-->
+            <div class="footer">
+                <p class="judul"><strong>CALCULATOR BASIC</strong></p><br>
+                <input type="text" id="displayNumber" readonly>
+            </div>
+
+            <div>
+            <p>
+                <button class="satu" onclick="Satu0()">1</button>
+                <button class="dua" onclick="Dua0()">2</button>
+                <button class="tiga" onclick="Tiga0()">3</button>
+                <button class="empat" onclick="Empat0()">4</button>
+                <button class="lima" onclick="Lima0()" >5</button>
+            </p>
+            <p>
+                <button class="enam" onclick="Enam0()">6</button>
+                <button class="tujuh" onclick="Tujuh0()">7</button>
+                <button class="delapan" onclick="Delapan0()">8</button>
+                <button class="sembilan" onclick="Sembilan0()">9</button>
+                <button class="nol" onclick="Kosong0()">0</button>
+            </p>
+            <p>
+                <button class="operator" onclick="Plus0()">+</button>
+                <button class="operator" onclick="Minus0()">-</button>
+                <button class="operator" onclick="Times0()">×</button>
+                <button class="operator" onclick="Divided0()">÷</button>
+                <button class="operator" onclick="Equal()">=</button>
+            </p>
+            </div>
+            <button class="clear" onclick="Clear0()">Clear</button>
+        <!--</div>-->
+    </div>
+  
+  
+        <script>
+            let calculation = '';
+
+            function Satu0(){
+                calculation += 1;
+                console.log(`${calculation}`)
+                updateDisplay();
+            }
+            function Dua0(){
+                calculation += 2;
+                console.log(`${calculation}`)
+                updateDisplay();
+            }
+            function Tiga0(){
+                calculation += 3;
+                console.log(`${calculation}`)
+                updateDisplay();
+            }
+            function Empat0(){
+                calculation += 4;
+                console.log(`${calculation}`)
+                updateDisplay();
+            }
+            function Lima0(){
+                calculation += 5;
+                console.log(`${calculation}`)
+                updateDisplay();
+            }
+            function Enam0(){
+                calculation += 6;
+                console.log(`${calculation}`)
+                updateDisplay();
+            }
+             function Tujuh0(){
+                calculation += 7;
+                console.log(`${calculation}`)
+                updateDisplay();
+            }
+             function Delapan0(){
+                calculation += 8;
+                console.log(`${calculation}`)
+                updateDisplay();
+            }
+             function Sembilan0(){
+                calculation += 9;
+                console.log(`${calculation}`)
+                updateDisplay();
+            }
+             function Kosong0(){
+                calculation += 0;
+                console.log(`${calculation}`)
+                updateDisplay();
+            }
+             function Plus0(){
+                calculation += '+';
+                console.log('+')
+                updateDisplay();
+            }
+            function Minus0(){
+                calculation += '-';
+                console.log('-')
+                updateDisplay();
+            }
+            function Times0(){
+                calculation += '*';
+                console.log('×')
+                updateDisplay();
+            }
+            function Divided0(){
+                calculation += ' / ';
+                console.log('/')
+                updateDisplay();
+            }
+            function Equal(){
+                try{
+                    calculation = eval(calculation);
+                    updateDisplay();
+                }catch(error){
+                    calculation = "Error";
+                    console.error("Invalid calculation", error);
+                    updateDisplay();
+                }
+                
+            }
+            function Clear0(){
+                calculation = '';
+                console.log(`${calculation}`)
+                updateDisplay();
+            }
+            function updateDisplay(){
+                document.getElementById("displayNumber").value = calculation;
+
+            }
+            
+            
+
+
+
+
+
+
+
+
+
+
+        </script>
+    </body>
+</html>
